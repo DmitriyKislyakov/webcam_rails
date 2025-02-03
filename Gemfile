@@ -1,8 +1,7 @@
 source "https://rubygems.org"
 
 gem "bootsnap"
-gem 'bootstrap'
-gem 'faker'
+gem "bootstrap"
 gem "jbuilder"
 gem "rails", "~> 8.0.1"
 gem "propshaft"
@@ -13,7 +12,7 @@ gem "turbo-rails"
 gem "stimulus-rails"
 gem "turbolinks"
 gem "webpacker"
-gem 'sass-rails'
+gem "sass-rails"
 
 gem "tzinfo-data", platforms: %i[ windows jruby ]
 
@@ -28,7 +27,10 @@ gem "thruster", require: false
 
 group :development, :test do
   gem "debug", platforms: %i[ mri windows ], require: "debug/prelude"
-  gem 'rspec-rails'
+  gem "rspec-rails"
+  gem "faker"
+  gem "database_cleaner"
+  gem "rails-controller-testing"
 
   gem "brakeman", require: false
 
@@ -36,16 +38,18 @@ group :development, :test do
 end
 
 group :development do
-  gem 'listen'
-  gem 'pry-rails'
-  gem 'rubocop', require: false
-  gem 'spring'
-  gem 'spring-watcher-listen'
+  gem "listen"
+  gem "pry-rails"
+  gem "rubocop", require: false
+  gem "spring"
+  gem "spring-watcher-listen"
   gem "web-console"
 end
 
 group :test do
   gem "capybara"
   gem "selenium-webdriver"
-  gem 'webdrivers'
+  gem "webdrivers"
+  gem "factory_bot_rails"
+  gem "shoulda-matchers"
 end
